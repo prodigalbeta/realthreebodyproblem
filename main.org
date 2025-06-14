@@ -2,22 +2,8 @@
 #+author: cThornberry, Warden
 #+description: Campaign Notes for Mothership campaign "The Real Three Body Problem"
 #+startup: showeverything
-#+options: toc:2
 
-* Table of Contents :toc:
-- [[#session-notes][Session Notes]]
-- [[#player-characters][Player Characters]]
-  - [[#alive][Alive]]
-  - [[#deadge][Deadge]]
-- [[#npcs][NPCs]]
-- [[#locations][Locations]]
-  - [[#space-stations][Space Stations]]
-  - [[#planets][Planets]]
-- [[#ships][Ships]]
-  - [[#active-service][Active Service]]
-  - [[#decomissioned][Decomissioned]]
-  - [[#status-unknown][Status Unknown]]
-- [[#extra-shit][Extra Shit]]
+#+TOC: headlines 1
 
 * Session Notes
 * Player Characters
