@@ -1,0 +1,36 @@
+#+title: The Real Three Body Problem Mothership Campaign
+#+author: cThornberry, Warden
+#+description: Campaign Notes for Mothership campaign "The Real Three Body Problem"
+#+startup: showeverything
+#+options: toc:2
+
+* Table of Contents :toc:
+- [[#session-notes][Session Notes]]
+- [[#player-characters][Player Characters]]
+  - [[#alive][Alive]]
+  - [[#deadge][Deadge]]
+- [[#npcs][NPCs]]
+- [[#locations][Locations]]
+  - [[#space-stations][Space Stations]]
+  - [[#planets][Planets]]
+- [[#ships][Ships]]
+  - [[#active-service][Active Service]]
+  - [[#decomissioned][Decomissioned]]
+  - [[#status-unknown][Status Unknown]]
+- [[#extra-shit][Extra Shit]]
+
+* Session Notes
+* Player Characters
+** Alive
+*** [[][]]
+** Deadge
+*** [[file:PCs/charlieDirosa.org][Charlie DiRosa]]
+* NPCs
+* Locations
+** Space Stations
+** Planets
+* Ships
+** Active Service
+** Decomissioned
+** Status Unknown
+* Extra Shit
