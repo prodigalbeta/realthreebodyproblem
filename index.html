@@ -3,310 +3,125 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-06-13 Fri 19:59 -->
+<!-- 2025-06-13 Fri 20:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Real Three Body Problem Mothership Campaign</title>
 <meta name="author" content="cThornberry, Warden" />
 <meta name="description" content="Campaign Notes for Mothership campaign &quot;The Real Three Body Problem&quot;" />
 <meta name="generator" content="Org Mode" />
-<style type="text/css">
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">The Real Three Body Problem Mothership Campaign</h1>
-<div id="table-of-contents-1" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents-1" role="doc-toc">
-<ul>
-<li><a href="#orgc527bc4">1. Session Notes</a></li>
-<li><a href="#org5f0480c">2. Player Characters</a>
-<ul>
-<li><a href="#org81e6c51">2.1. Alive</a>
-<ul>
-<li><a href="#org4fc928c">2.1.1. [[][]]</a></li>
-</ul>
-</li>
-<li><a href="#org5d35c07">2.2. Deadge</a>
-<ul>
-<li><a href="#orgc4eb289">2.2.1. Charlie DiRosa</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org502d885">3. NPCs</a></li>
-<li><a href="#orge1ac1d5">4. Locations</a>
-<ul>
-<li><a href="#org16ebbbb">4.1. Space Stations</a></li>
-<li><a href="#orgec0d4a5">4.2. Planets</a></li>
-</ul>
-</li>
-<li><a href="#orga0937ef">5. Ships</a>
-<ul>
-<li><a href="#orgbdb1c49">5.1. Active Service</a></li>
-<li><a href="#org8c6eac2">5.2. Decomissioned</a></li>
-<li><a href="#org78acdf1">5.3. Status Unknown</a></li>
-</ul>
-</li>
-<li><a href="#org74bcbff">6. Extra Shit</a></li>
-</ul>
-</div>
-</div>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc527bc4">1. Session Notes</a></li>
-<li><a href="#org5f0480c">2. Player Characters</a></li>
-<li><a href="#org502d885">3. NPCs</a></li>
-<li><a href="#orge1ac1d5">4. Locations</a></li>
-<li><a href="#orga0937ef">5. Ships</a></li>
-<li><a href="#org74bcbff">6. Extra Shit</a></li>
+<li><a href="#orgf8de86a">Player Characters</a>
+<ul>
+<li><a href="#org5c3b651">Alive</a>
+<ul>
+<li><a href="#org94d9ee9">[[][]]</a></li>
+</ul>
+</li>
+<li><a href="#org6fda7e1">Deadge</a>
+<ul>
+<li><a href="#orga2236fa">Charlie DiRosa</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgf7a130a">Factions</a></li>
+<li><a href="#orgfd1b72a">NPCs</a></li>
+<li><a href="#orga0643c4">Locations</a>
+<ul>
+<li><a href="#orge2a8f20">Space Stations</a></li>
+<li><a href="#orge2a06d0">Planets</a></li>
+</ul>
+</li>
+<li><a href="#org6000675">Ships</a>
+<ul>
+<li><a href="#org8bc7619">Active Service</a></li>
+<li><a href="#orgeb3c522">Decomissioned</a></li>
+<li><a href="#org3f250f4">Status Unknown</a></li>
+</ul>
+</li>
+<li><a href="#org66c7046">Extra Shit</a></li>
+<li><a href="#orgaadc579">Session Notes</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc527bc4" class="outline-2">
-<h2 id="orgc527bc4"><span class="section-number-2">1.</span> Session Notes</h2>
+<div id="outline-container-orgf8de86a" class="outline-2">
+<h2 id="orgf8de86a">Player Characters</h2>
+<div class="outline-text-2" id="text-orgf8de86a">
 </div>
-<div id="outline-container-org5f0480c" class="outline-2">
-<h2 id="org5f0480c"><span class="section-number-2">2.</span> Player Characters</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org5c3b651" class="outline-3">
+<h3 id="org5c3b651">Alive</h3>
+<div class="outline-text-3" id="text-org5c3b651">
 </div>
-<div id="outline-container-org81e6c51" class="outline-3">
-<h3 id="org81e6c51"><span class="section-number-3">2.1.</span> Alive</h3>
-<div class="outline-text-3" id="text-2-1">
-</div>
-<div id="outline-container-org4fc928c" class="outline-4">
-<h4 id="org4fc928c"><span class="section-number-4">2.1.1.</span> [[][]]</h4>
+<div id="outline-container-org94d9ee9" class="outline-4">
+<h4 id="org94d9ee9">[[][]]</h4>
 </div>
 </div>
-<div id="outline-container-org5d35c07" class="outline-3">
-<h3 id="org5d35c07"><span class="section-number-3">2.2.</span> Deadge</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-org6fda7e1" class="outline-3">
+<h3 id="org6fda7e1">Deadge</h3>
+<div class="outline-text-3" id="text-org6fda7e1">
 </div>
-<div id="outline-container-orgc4eb289" class="outline-4">
-<h4 id="orgc4eb289"><span class="section-number-4">2.2.1.</span> <a href="PCs/charlieDirosa.html">Charlie DiRosa</a></h4>
+<div id="outline-container-orga2236fa" class="outline-4">
+<h4 id="orga2236fa"><a href="PCs/charlieDirosa.html">Charlie DiRosa</a></h4>
 </div>
 </div>
 </div>
-<div id="outline-container-org502d885" class="outline-2">
-<h2 id="org502d885"><span class="section-number-2">3.</span> NPCs</h2>
+<div id="outline-container-orgf7a130a" class="outline-2">
+<h2 id="orgf7a130a">Factions</h2>
 </div>
-<div id="outline-container-orge1ac1d5" class="outline-2">
-<h2 id="orge1ac1d5"><span class="section-number-2">4.</span> Locations</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orgfd1b72a" class="outline-2">
+<h2 id="orgfd1b72a">NPCs</h2>
 </div>
-<div id="outline-container-org16ebbbb" class="outline-3">
-<h3 id="org16ebbbb"><span class="section-number-3">4.1.</span> Space Stations</h3>
+<div id="outline-container-orga0643c4" class="outline-2">
+<h2 id="orga0643c4">Locations</h2>
+<div class="outline-text-2" id="text-orga0643c4">
 </div>
-<div id="outline-container-orgec0d4a5" class="outline-3">
-<h3 id="orgec0d4a5"><span class="section-number-3">4.2.</span> Planets</h3>
+<div id="outline-container-orge2a8f20" class="outline-3">
+<h3 id="orge2a8f20">Space Stations</h3>
 </div>
-</div>
-<div id="outline-container-orga0937ef" class="outline-2">
-<h2 id="orga0937ef"><span class="section-number-2">5.</span> Ships</h2>
-<div class="outline-text-2" id="text-5">
-</div>
-<div id="outline-container-orgbdb1c49" class="outline-3">
-<h3 id="orgbdb1c49"><span class="section-number-3">5.1.</span> Active Service</h3>
-</div>
-<div id="outline-container-org8c6eac2" class="outline-3">
-<h3 id="org8c6eac2"><span class="section-number-3">5.2.</span> Decomissioned</h3>
-</div>
-<div id="outline-container-org78acdf1" class="outline-3">
-<h3 id="org78acdf1"><span class="section-number-3">5.3.</span> Status Unknown</h3>
+<div id="outline-container-orge2a06d0" class="outline-3">
+<h3 id="orge2a06d0">Planets</h3>
 </div>
 </div>
-<div id="outline-container-org74bcbff" class="outline-2">
-<h2 id="org74bcbff"><span class="section-number-2">6.</span> Extra Shit</h2>
+<div id="outline-container-org6000675" class="outline-2">
+<h2 id="org6000675">Ships</h2>
+<div class="outline-text-2" id="text-org6000675">
+</div>
+<div id="outline-container-org8bc7619" class="outline-3">
+<h3 id="org8bc7619">Active Service</h3>
+</div>
+<div id="outline-container-orgeb3c522" class="outline-3">
+<h3 id="orgeb3c522">Decomissioned</h3>
+</div>
+<div id="outline-container-org3f250f4" class="outline-3">
+<h3 id="org3f250f4">Status Unknown</h3>
+</div>
+</div>
+<div id="outline-container-org66c7046" class="outline-2">
+<h2 id="org66c7046">Extra Shit</h2>
+</div>
+<div id="outline-container-orgaadc579" class="outline-2">
+<h2 id="orgaadc579">Session Notes</h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: cThornberry, Warden</p>
-<p class="date">Created: 2025-06-13 Fri 19:59</p>
+<p class="date">Created: 2025-06-13 Fri 20:19</p>
 </div>
 </body>
 </html>

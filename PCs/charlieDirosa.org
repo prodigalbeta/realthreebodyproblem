@@ -1,1 +1,8 @@
 #+title: Charlie Dirosa
+#+options: num:nil
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* Description
+* Background
+* Stats
+* Ailments

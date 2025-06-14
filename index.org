@@ -2,15 +2,15 @@
 #+author: cThornberry, Warden
 #+description: Campaign Notes for Mothership campaign "The Real Three Body Problem"
 #+startup: showeverything
+#+options: num:nil
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
-#+TOC: headlines 1
-
-* Session Notes
 * Player Characters
 ** Alive
 *** [[][]]
 ** Deadge
 *** [[file:PCs/charlieDirosa.org][Charlie DiRosa]]
+* Factions
 * NPCs
 * Locations
 ** Space Stations
@@ -20,3 +20,4 @@
 ** Decomissioned
 ** Status Unknown
 * Extra Shit
+* Session Notes
